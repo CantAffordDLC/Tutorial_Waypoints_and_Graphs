@@ -5,21 +5,29 @@ using UnityEngine;
 public class FollowWP : MonoBehaviour
 {
     public GameObject[] waypoints;
+    public GameObject tracker;
     int currentWP = 0;
 
     public float speed = 10f;
     public float rotSpeed = 10f;
+    public float lookAhead = 10f;
 
     // Start is called before the first frame update
     void Start()
     {
+        tracker = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+        DestroyImmediate(tracker.GetComponent<Collider>());
+        tracker.GetComponent<MeshRenderer>().enabled = false;
+        tracker.transform.position = this.transform.position;
+        tracker.transform.rotation = this.transform.rotation;
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Vector3.Distance(this.transform.position, waypoints[currentWP].transform.position) < 3)
+    void ProgressTracker() {
+
+        if (Vector3.Distance(tracker.transform.position, this.transform.position) > lookAhead) return;
+
+        if (Vector3.Distance(tracker.transform.position, waypoints[currentWP].transform.position) < 3)
         {
             currentWP++;
         }
@@ -29,8 +37,17 @@ public class FollowWP : MonoBehaviour
             currentWP = 0;
         }
 
+        tracker.transform.LookAt(waypoints[currentWP].transform);
+        tracker.transform.Translate(0, 0, (speed +20) * Time.deltaTime);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+        ProgressTracker();
         //this.transform.LookAt(waypoints[currentWP].transform);
-        Quaternion lookatWP = Quaternion.LookRotation(waypoints[currentWP].transform.position - this.transform.position);
+        Quaternion lookatWP = Quaternion.LookRotation(tracker.transform.position - this.transform.position);
         this.transform.rotation = Quaternion.Slerp(transform.rotation, lookatWP, rotSpeed * Time.deltaTime);
         this.transform.Translate(0, 0, speed * Time.deltaTime);
 

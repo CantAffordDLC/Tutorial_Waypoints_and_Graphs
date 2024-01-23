@@ -277,8 +277,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 50
   rotSpeed: 10
+  lookAhead: 10
 --- !u!4 &42117669
 Transform:
   m_ObjectHideFlags: 0
@@ -546,8 +548,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 40
   rotSpeed: 3
+  lookAhead: 10
 --- !u!4 &110409789
 Transform:
   m_ObjectHideFlags: 0
@@ -1181,8 +1185,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 50
   rotSpeed: 10
+  lookAhead: 10
 --- !u!4 &301831473
 Transform:
   m_ObjectHideFlags: 0
@@ -1326,8 +1332,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 15
   rotSpeed: 5
+  lookAhead: 10
 --- !u!4 &343380978
 Transform:
   m_ObjectHideFlags: 0
@@ -1759,8 +1767,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 40
   rotSpeed: 3
+  lookAhead: 10
 --- !u!4 &517992801
 Transform:
   m_ObjectHideFlags: 0
@@ -3361,8 +3371,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 15
   rotSpeed: 5
+  lookAhead: 10
 --- !u!4 &962159127
 Transform:
   m_ObjectHideFlags: 0
@@ -3707,8 +3719,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 15
   rotSpeed: 5
+  lookAhead: 10
 --- !u!4 &1044507563
 Transform:
   m_ObjectHideFlags: 0
@@ -4495,8 +4509,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 40
   rotSpeed: 3
+  lookAhead: 10
 --- !u!4 &1421520152
 Transform:
   m_ObjectHideFlags: 0
@@ -5098,8 +5114,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 20
   rotSpeed: 10
+  lookAhead: 10
 --- !u!4 &1576729855
 Transform:
   m_ObjectHideFlags: 0
@@ -5396,8 +5414,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 20
   rotSpeed: 10
+  lookAhead: 10
 --- !u!4 &1707843308
 Transform:
   m_ObjectHideFlags: 0
@@ -5820,8 +5840,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 20
   rotSpeed: 10
+  lookAhead: 10
 --- !u!4 &1911714166
 Transform:
   m_ObjectHideFlags: 0
@@ -6485,8 +6507,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 50
   rotSpeed: 10
+  lookAhead: 10
 --- !u!4 &2119045850
 Transform:
   m_ObjectHideFlags: 0
@@ -7009,8 +7033,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 50
   rotSpeed: 10
+  lookAhead: 10
 --- !u!54 &2713447972708953234
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8067,8 +8093,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 40
   rotSpeed: 3
+  lookAhead: 10
 --- !u!54 &7863693248642204186
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8136,8 +8164,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 15
   rotSpeed: 5
+  lookAhead: 10
 --- !u!54 &7871142010654116012
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8347,8 +8377,10 @@ MonoBehaviour:
   - {fileID: 1267428773}
   - {fileID: 1685848178}
   - {fileID: 730623183}
+  tracker: {fileID: 0}
   speed: 20
   rotSpeed: 10
+  lookAhead: 10
 --- !u!54 &9048989675280529227
 Rigidbody:
   m_ObjectHideFlags: 0
