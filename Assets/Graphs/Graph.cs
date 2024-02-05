@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -63,13 +64,14 @@ public class Graph
             Node thisNode = open[i];
             if (thisNode.getID() == endId)
             {
+                ReconstructPath(start, end);
                 return true;
             }
 
             open.RemoveAt(i);
             closed.Add(thisNode);
             Node neighbour;
-            foreach(Edge e in thisNode.edgeList)
+            foreach (Edge e in thisNode.edgeList)
             {
                 neighbour = e.endNode;
 
@@ -77,7 +79,7 @@ public class Graph
                     continue;
 
                 tentative_g_score = thisNode.g + distance(thisNode, neighbour);
-                if(open.IndexOf(neighbour) == -1)
+                if (open.IndexOf(neighbour) == -1)
                 {
                     open.Add(neighbour);
                     tentative_is_better = true;
@@ -102,6 +104,20 @@ public class Graph
             }
         }
         return false;
+    }
+
+    public void ReconstructPath(Node startId, Node endId)
+    {
+        pathList.Clear();
+        pathList.Add(endId);
+
+        var p = endId.cameFrom;
+        while (p != startId && p != null)
+        {
+            pathList.Insert(0, p);
+            p= p.cameFrom;
+        }
+        pathList.Insert(0, startId);
     }
 
     float distance(Node a, Node b)
